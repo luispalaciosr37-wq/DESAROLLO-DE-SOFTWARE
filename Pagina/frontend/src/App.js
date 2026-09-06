@@ -6,12 +6,12 @@ function App() {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    // Traer productos
+  
     axios.get("http://localhost:8080/api/productos")
       .then(res => setProductos(res.data))
       .catch(err => console.error(err));
 
-    // Traer categorías
+  
     axios.get("http://localhost:8080/api/categorias")
       .then(res => setCategorias(res.data))
       .catch(err => console.error(err));
